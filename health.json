@@ -1,228 +1,228 @@
 {
-  "timestamp": 1771022328458,
+  "timestamp": 1771026541653,
   "success": true,
   "workingDomain": "https://trgoals1532.xyz",
   "baseUrl": "https://no6.d72577a9dd0ec27.sbs/",
   "streams": [
     {
       "name": "trgoals",
-      "url": "https://no6.d72577a9dd0ec27.sbs//trgoals/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/trgoals/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "zirve",
-      "url": "https://no6.d72577a9dd0ec27.sbs//zirve/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/zirve/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "yayin1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//yayin1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/yayin1/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "inat",
-      "url": "https://no6.d72577a9dd0ec27.sbs//inat/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/inat/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "b2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//b2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/b2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "b3",
-      "url": "https://no6.d72577a9dd0ec27.sbs//b3/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/b3/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "b4",
-      "url": "https://no6.d72577a9dd0ec27.sbs//b4/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/b4/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "b5",
-      "url": "https://no6.d72577a9dd0ec27.sbs//b5/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/b5/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "bm1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//bm1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/bm1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "bm2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//bm2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/bm2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ss",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ss/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ss/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ss2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ss2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ss2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//t1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/t1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//t2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/t2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t3",
-      "url": "https://no6.d72577a9dd0ec27.sbs//t3/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/t3/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t4",
-      "url": "https://no6.d72577a9dd0ec27.sbs//t4/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/t4/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "smarts",
-      "url": "https://no6.d72577a9dd0ec27.sbs//smarts/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/smarts/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "sms2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//sms2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/sms2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "trtspor",
-      "url": "https://no6.d72577a9dd0ec27.sbs//trtspor/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/trtspor/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "trtspor2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//trtspor2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/trtspor2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "trt1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//trt1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/trt1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "as",
-      "url": "https://no6.d72577a9dd0ec27.sbs//as/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/as/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "atv",
-      "url": "https://no6.d72577a9dd0ec27.sbs//atv/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/atv/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "tv8",
-      "url": "https://no6.d72577a9dd0ec27.sbs//tv8/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/tv8/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "tv85",
-      "url": "https://no6.d72577a9dd0ec27.sbs//tv85/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/tv85/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "f1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//f1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/f1/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "nbatv",
-      "url": "https://no6.d72577a9dd0ec27.sbs//nbatv/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/nbatv/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ex1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex1/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ex3",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex3/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex3/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex4",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex4/mono.m3u8",
-      "valid": true,
-      "error": null
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex4/mono.m3u8",
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "ex5",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex5/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex5/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex6",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex6/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex6/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex7",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex7/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex7/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex8",
-      "url": "https://no6.d72577a9dd0ec27.sbs//ex8/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/ex8/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "eu1",
-      "url": "https://no6.d72577a9dd0ec27.sbs//eu1/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/eu1/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "eu2",
-      "url": "https://no6.d72577a9dd0ec27.sbs//eu2/mono.m3u8",
+      "url": "https://no6.d72577a9dd0ec27.sbs/eu2/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     }
