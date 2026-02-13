@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 20
 
-      - run: node scraper.js
+      - run: node update.js
 
       - name: Commit changes
         run: |
