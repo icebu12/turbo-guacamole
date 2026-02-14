@@ -8,14 +8,6 @@ const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
 const REFERER = `${REDIRECT_URL}/`
 const OUTPUT_DIR = "streams2";
 
-const healthReport = {
-    timestamp: Date.now(),
-    success: false,
-    baseUrl: null,
-    streams: [],
-    error: null
-};
-
 const STREAM_SUFFIXES = [
     { name: "androstreamlivebs1", path: `receptestt.m3u8` },
     { name: "androstreamlivebs2", path: `androstreamlivebs2.m3u8` },
@@ -278,71 +270,37 @@ async function generateStreams(baseUrl) {
 
         const streamUrl = baseUrl + stream.path;
 
-        const streamStatus = {
-            name: stream.name,
-            url: streamUrl,
-            valid: false,
-            error: null
-        };
-
         //console.log("Validating stream:", streamUrl);
 
-        try {
         /*    const valid = await validateStream(streamUrl);
-
+ 
             if (valid) {*/
+        success++;
 
-                streamStatus.valid = true;
-                success++;
+        const filename = `${OUTPUT_DIR}/stream_${stream.name}.m3u8`;
 
-                const filename = `${OUTPUT_DIR}/stream_${stream.name}.m3u8`;
-
-                const content = `${M3U8_HEADER}
+        const content = `${M3U8_HEADER}
 ${streamUrl}
 `;
 
-                fs.writeFileSync(filename, content);
+        fs.writeFileSync(filename, content);
 
-           /* } else {
-                streamStatus.error = "Validation failed";
-            }*/
-
-        } catch (err) {
-            streamStatus.error = err.message;
-        }
-
-        healthReport.streams.push(streamStatus);
+        /* } else {
+             streamStatus.error = "Validation failed";
+         }*/
     }
 
     return success;
 }
 
 (async () => {
-    try {
-       /* const domain = await findWorkingDomain();
-        healthReport.workingDomain = domain;
-        if (!domain) throw new Error("No working domain found");*/
+    const baseUrl = await extractBaseUrlFromPage(REDIRECT_URL);
+    if (!baseUrl) throw new Error("Could not extract baseUrl");
 
-        const baseUrl = await extractBaseUrlFromPage(REDIRECT_URL);
-        healthReport.baseUrl = baseUrl;
-        if (!baseUrl) throw new Error("Could not extract baseUrl");
+    console.log("Extracted baseUrl:", baseUrl);
 
-        console.log("Extracted baseUrl:", baseUrl);
+    const count = await generateStreams(baseUrl);
+    if (count === 0) throw new Error("No valid streams generated");
 
-        const count = await generateStreams(baseUrl);
-        if (count === 0) throw new Error("No valid streams generated");
-
-        //saveLastDomain(domain);
-
-        healthReport.success = healthReport.streams.some(s => s.valid);
-
-        fs.writeFileSync(
-            "health2.json",
-            JSON.stringify(healthReport, null, 2)
-        );
-
-        console.log("Done. Streams generated:", count);
-    } catch (err) {
-        healthReport.error = err.message;
-    }
+    console.log("Done. Streams generated:", count);
 })();
