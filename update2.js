@@ -1,13 +1,12 @@
 import fs from "fs";
 
 const REDIRECT_URL = "https://taraftariumizle.org";
-const BASE_PATTERN = REDIRECT_URL;
+const WORKER_PROXY = "https://proxy.freecdn.workers.dev/?url=";
 const CONFIG_PAGE_PATH = "/event.html?id=androstreamlivebs1";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
 const REFERER = `${REDIRECT_URL}/`
 const OUTPUT_DIR = "streams2";
-const PREFIX = "/checklist"
 
 const healthReport = {
     timestamp: Date.now(),
@@ -18,66 +17,66 @@ const healthReport = {
 };
 
 const STREAM_SUFFIXES = [
-    { name: "androstreamlivebs1", path: `${PREFIX}/receptestt.m3u8` },
-    { name: "androstreamlivebs2", path: `${PREFIX}/androstreamlivebs2.m3u8` },
-    { name: "androstreamlivebs3", path: `${PREFIX}/androstreamlivebs3.m3u8` },
-    { name: "androstreamlivebs4", path: `${PREFIX}/androstreamlivebs4.m3u8` },
-    { name: "androstreamlivebs5", path: `${PREFIX}/androstreamlivebs5.m3u8` },
-    { name: "androstreamlivebsm1", path: `${PREFIX}/androstreamlivebsm1.m3u8` },
-    { name: "androstreamlivebsm2", path: `${PREFIX}/androstreamlivebsm2.m3u8` },
-    { name: "androstreamlivess1", path: `${PREFIX}/androstreamlivess1.m3u8` },
-    { name: "androstreamlivess2", path: `${PREFIX}/androstreamlivess2.m3u8` },
-    { name: "androstreamlivessplus1", path: `${PREFIX}/androstreamlivessplus1.m3u8` },
-    { name: "androstreamlivets", path: `${PREFIX}/androstreamlivets.m3u8` },
-    { name: "androstreamlivets1", path: `${PREFIX}/androstreamlivets1.m3u8` },
-    { name: "androstreamlivets2", path: `${PREFIX}/androstreamlivets2.m3u8` },
-    { name: "androstreamlivets3", path: `${PREFIX}/androstreamlivets3.m3u8` },
-    { name: "androstreamlivets4", path: `${PREFIX}/androstreamlivets4.m3u8` },
-    { name: "androstreamlivesm1", path: `${PREFIX}/androstreamlivesm1.m3u8` },
-    { name: "androstreamlivesm2", path: `${PREFIX}/androstreamlivesm2.m3u8` },
-    { name: "androstreamlivees1", path: `${PREFIX}/androstreamlivees1.m3u8` },
-    { name: "androstreamlivees2", path: `${PREFIX}/androstreamlivees2.m3u8` },
-    { name: "androstreamliveidm", path: `${PREFIX}/androstreamliveidm.m3u8` },
-    { name: "androstreamlivetrt1", path: `${PREFIX}/androstreamlivetrt1.m3u8` },
-    { name: "androstreamlivetrts", path: `${PREFIX}/androstreamlivetrts.m3u8` },
-    { name: "androstreamlivetrtsy", path: `${PREFIX}/androstreamlivetrtsy.m3u8` },
-    { name: "androstreamliveatv", path: `${PREFIX}/androstreamliveatv.m3u8` },
-    { name: "androstreamliveas", path: `${PREFIX}/androstreamliveas.m3u8` },
-    { name: "androstreamlivea2", path: `${PREFIX}/androstreamlivea2.m3u8` },
-    { name: "androstreamlivetjk", path: `${PREFIX}/androstreamlivetjk.m3u8` },
-    { name: "androstreamliveht", path: `${PREFIX}/androstreamliveht.m3u8` },
-    { name: "androstreamlivenba", path: `${PREFIX}/androstreamlivenba.m3u8` },
-    { name: "androstreamlivetv8", path: `${PREFIX}/androstreamlivetv8.m3u8` },
-    { name: "androstreamlivetv85", path: `${PREFIX}/androstreamlivetv85.m3u8` },
-    { name: "androstreamlivetb", path: `${PREFIX}/androstreamlivetb.m3u8` },
-    { name: "androstreamlivetb1", path: `${PREFIX}/androstreamlivetb1.m3u8` },
-    { name: "androstreamlivetb2", path: `${PREFIX}/androstreamlivetb2.m3u8` },
-    { name: "androstreamlivetb3", path: `${PREFIX}/androstreamlivetb3.m3u8` },
-    { name: "androstreamlivetb4", path: `${PREFIX}/androstreamlivetb4.m3u8` },
-    { name: "androstreamlivetb5", path: `${PREFIX}/androstreamlivetb5.m3u8` },
-    { name: "androstreamlivetb6", path: `${PREFIX}/androstreamlivetb6.m3u8` },
-    { name: "androstreamlivetb7", path: `${PREFIX}/androstreamlivetb7.m3u8` },
-    { name: "androstreamlivetb8", path: `${PREFIX}/androstreamlivetb8.m3u8` },
-    { name: "androstreamlivefb", path: `${PREFIX}/androstreamlivefb.m3u8` },
-    { name: "androstreamlivecbcs", path: `${PREFIX}/androstreamlivecbcs.m3u8` },
-    { name: "androstreamlivegs", path: `${PREFIX}/androstreamlivegs.m3u8` },
-    { name: "androstreamlivesptstv", path: `${PREFIX}/androstreamlivesptstv.m3u8` },
-    { name: "androstreamliveexn", path: `${PREFIX}/androstreamliveexn.m3u8` },
-    { name: "androstreamliveexn1", path: `${PREFIX}/androstreamliveexn1.m3u8` },
-    { name: "androstreamliveexn2", path: `${PREFIX}/androstreamliveexn2.m3u8` },
-    { name: "androstreamliveexn3", path: `${PREFIX}/androstreamliveexn3.m3u8` },
-    { name: "androstreamliveexn4", path: `${PREFIX}/androstreamliveexn4.m3u8` },
-    { name: "androstreamliveexn5", path: `${PREFIX}/androstreamliveexn5.m3u8` },
-    { name: "androstreamliveexn6", path: `${PREFIX}/androstreamliveexn6.m3u8` },
-    { name: "androstreamliveexn7", path: `${PREFIX}/androstreamliveexn7.m3u8` },
-    { name: "androstreamliveexn8", path: `${PREFIX}/androstreamliveexn8.m3u8` }
+    { name: "androstreamlivebs1", path: `receptestt.m3u8` },
+    { name: "androstreamlivebs2", path: `androstreamlivebs2.m3u8` },
+    { name: "androstreamlivebs3", path: `androstreamlivebs3.m3u8` },
+    { name: "androstreamlivebs4", path: `androstreamlivebs4.m3u8` },
+    { name: "androstreamlivebs5", path: `androstreamlivebs5.m3u8` },
+    { name: "androstreamlivebsm1", path: `androstreamlivebsm1.m3u8` },
+    { name: "androstreamlivebsm2", path: `androstreamlivebsm2.m3u8` },
+    { name: "androstreamlivess1", path: `androstreamlivess1.m3u8` },
+    { name: "androstreamlivess2", path: `androstreamlivess2.m3u8` },
+    { name: "androstreamlivessplus1", path: `androstreamlivessplus1.m3u8` },
+    { name: "androstreamlivets", path: `androstreamlivets.m3u8` },
+    { name: "androstreamlivets1", path: `androstreamlivets1.m3u8` },
+    { name: "androstreamlivets2", path: `androstreamlivets2.m3u8` },
+    { name: "androstreamlivets3", path: `androstreamlivets3.m3u8` },
+    { name: "androstreamlivets4", path: `androstreamlivets4.m3u8` },
+    { name: "androstreamlivesm1", path: `androstreamlivesm1.m3u8` },
+    { name: "androstreamlivesm2", path: `androstreamlivesm2.m3u8` },
+    { name: "androstreamlivees1", path: `androstreamlivees1.m3u8` },
+    { name: "androstreamlivees2", path: `androstreamlivees2.m3u8` },
+    { name: "androstreamliveidm", path: `androstreamliveidm.m3u8` },
+    { name: "androstreamlivetrt1", path: `androstreamlivetrt1.m3u8` },
+    { name: "androstreamlivetrts", path: `androstreamlivetrts.m3u8` },
+    { name: "androstreamlivetrtsy", path: `androstreamlivetrtsy.m3u8` },
+    { name: "androstreamliveatv", path: `androstreamliveatv.m3u8` },
+    { name: "androstreamliveas", path: `androstreamliveas.m3u8` },
+    { name: "androstreamlivea2", path: `androstreamlivea2.m3u8` },
+    { name: "androstreamlivetjk", path: `androstreamlivetjk.m3u8` },
+    { name: "androstreamliveht", path: `androstreamliveht.m3u8` },
+    { name: "androstreamlivenba", path: `androstreamlivenba.m3u8` },
+    { name: "androstreamlivetv8", path: `androstreamlivetv8.m3u8` },
+    { name: "androstreamlivetv85", path: `androstreamlivetv85.m3u8` },
+    { name: "androstreamlivetb", path: `androstreamlivetb.m3u8` },
+    { name: "androstreamlivetb1", path: `androstreamlivetb1.m3u8` },
+    { name: "androstreamlivetb2", path: `androstreamlivetb2.m3u8` },
+    { name: "androstreamlivetb3", path: `androstreamlivetb3.m3u8` },
+    { name: "androstreamlivetb4", path: `androstreamlivetb4.m3u8` },
+    { name: "androstreamlivetb5", path: `androstreamlivetb5.m3u8` },
+    { name: "androstreamlivetb6", path: `androstreamlivetb6.m3u8` },
+    { name: "androstreamlivetb7", path: `androstreamlivetb7.m3u8` },
+    { name: "androstreamlivetb8", path: `androstreamlivetb8.m3u8` },
+    { name: "androstreamlivefb", path: `androstreamlivefb.m3u8` },
+    { name: "androstreamlivecbcs", path: `androstreamlivecbcs.m3u8` },
+    { name: "androstreamlivegs", path: `androstreamlivegs.m3u8` },
+    { name: "androstreamlivesptstv", path: `androstreamlivesptstv.m3u8` },
+    { name: "androstreamliveexn", path: `androstreamliveexn.m3u8` },
+    { name: "androstreamliveexn1", path: `androstreamliveexn1.m3u8` },
+    { name: "androstreamliveexn2", path: `androstreamliveexn2.m3u8` },
+    { name: "androstreamliveexn3", path: `androstreamliveexn3.m3u8` },
+    { name: "androstreamliveexn4", path: `androstreamliveexn4.m3u8` },
+    { name: "androstreamliveexn5", path: `androstreamliveexn5.m3u8` },
+    { name: "androstreamliveexn6", path: `androstreamliveexn6.m3u8` },
+    { name: "androstreamliveexn7", path: `androstreamliveexn7.m3u8` },
+    { name: "androstreamliveexn8", path: `androstreamliveexn8.m3u8` }
 ];
 
-const CONFIG_REGEX = /const\s+baseurls\s*=\s*\[\s*([\s\S]*?)\s*\]/i;
+const CONFIG_REGEX = /const\s+baseurls\s*=\s*\[(.*?)\]/is;
 
 const M3U8_HEADER = `#EXTM3U
 #EXT-X-VERSION:3
-#EXT-X-STREAM-INF:BANDWIDTH=5500000,RESOLUTION=1920x1080,FRAME-RATE=25`;
+#EXT-X-STREAM-INF:BANDWIDTH=5500000,AVERAGE-BANDWIDTH=8976000,RESOLUTION=1920x1080,CODECS="avc1.640028,mp4a.40.2",FRAME-RATE=25`;
 
 function fetchWithTimeout(url, timeout = 8000) {
     const controller = new AbortController();
@@ -184,7 +183,9 @@ async function findWorkingDomain() {
 }
 
 async function extractBaseUrlFromPage(domain) {
-    const fullUrl = domain + CONFIG_PAGE_PATH;
+    const targetUrl = domain + CONFIG_PAGE_PATH;
+
+    const fullUrl = WORKER_PROXY + encodeURIComponent(targetUrl);
 
     console.log("Visiting config page:", fullUrl);
 
@@ -194,7 +195,7 @@ async function extractBaseUrlFromPage(domain) {
     const baseUrls = extractBaseUrls(html);
     if (baseUrls.length === 0) return null;
 
-    const working = await pickWorkingBaseUrl(baseUrls, configPageUrl);
+    const working = await pickWorkingBaseUrl(baseUrls);
 
     return working;
 }
@@ -212,14 +213,14 @@ function extractBaseUrls(html) {
     return urls;
 }
 
-async function pickWorkingBaseUrl(baseUrls, referer) {
+async function pickWorkingBaseUrl(baseUrls) {
 
     for (const url of baseUrls) {
 
         // Try lightweight test
-        const testUrl = `${url}${PREFIX}/receptestt.m3u8`;
+        const testUrl = WORKER_PROXY + url + "receptestt.m3u8";
 
-        const valid = await validateStream(testUrl, referer);
+        const valid = await validateStream(testUrl);
 
         if (valid) {
             return url;
@@ -284,13 +285,12 @@ async function generateStreams(baseUrl) {
             error: null
         };
 
-        console.log("Validating stream:", streamUrl);
+        //console.log("Validating stream:", streamUrl);
 
         try {
+        /*    const valid = await validateStream(streamUrl);
 
-            const valid = await validateStream(streamUrl);
-
-            if (valid) {
+            if (valid) {*/
 
                 streamStatus.valid = true;
                 success++;
@@ -303,9 +303,9 @@ ${streamUrl}
 
                 fs.writeFileSync(filename, content);
 
-            } else {
+           /* } else {
                 streamStatus.error = "Validation failed";
-            }
+            }*/
 
         } catch (err) {
             streamStatus.error = err.message;
@@ -323,7 +323,7 @@ ${streamUrl}
         healthReport.workingDomain = domain;
         if (!domain) throw new Error("No working domain found");*/
 
-        const baseUrl = await extractBaseUrlFromPage(BASE_PATTERN);
+        const baseUrl = await extractBaseUrlFromPage(REDIRECT_URL);
         healthReport.baseUrl = baseUrl;
         if (!baseUrl) throw new Error("Could not extract baseUrl");
 
