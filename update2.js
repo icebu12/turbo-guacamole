@@ -2,14 +2,13 @@ import fs from "fs";
 
 const REDIRECT_URL = "https://taraftariumizle.org";
 const WORKER_PROXY = "https://proxy.freecdn.workers.dev/?url=";
-const CONFIG_PAGE_PATH = "event.html?id=androstreamlivebs1";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
 const REFERER = `${REDIRECT_URL}/`
 const OUTPUT_DIR = "streams2";
 
 const STREAM_SUFFIXES = [
-    { name: "androstreamlivebs1", path: `receptestt.m3u8` },
+    { name: "androstreamlivebs1", path: `androstreamlivebs1.m3u8` },
     { name: "androstreamlivebs2", path: `androstreamlivebs2.m3u8` },
     { name: "androstreamlivebs3", path: `androstreamlivebs3.m3u8` },
     { name: "androstreamlivebs4", path: `androstreamlivebs4.m3u8` },
