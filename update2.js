@@ -2,7 +2,7 @@ import fs from "fs";
 
 const REDIRECT_URL = "https://taraftariumizle.org";
 const WORKER_PROXY = "https://proxy.freecdn.workers.dev/?url=";
-const CONFIG_PAGE_PATH = "/event.html?id=androstreamlivebs1";
+const CONFIG_PAGE_PATH = "event.html?id=androstreamlivebs1";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
 const REFERER = `${REDIRECT_URL}/`
@@ -87,6 +87,48 @@ function fetchWithTimeout(url, timeout = 8000) {
             return res.text();
         })
         .catch(() => null);
+}
+
+function extractAmpUrl(html) {
+    const match = html.match(
+        /<link\s+rel=["']amphtml["']\s+href=["']([^"']+)["']/i
+    );
+
+    if (!match) return null;
+
+    return match[1];
+}
+
+async function resolveAmpDomain() {
+    const proxiedUrl = WORKER_PROXY + encodeURIComponent(REDIRECT_URL);
+
+    console.log("Visiting main site:", proxiedUrl);
+
+    const html = await fetchWithTimeout(proxiedUrl);
+
+    if (!html) return null;
+
+    const ampUrl = extractAmpUrl(html);
+
+    console.log("AMP URL found:", ampUrl);
+
+    return ampUrl;
+}
+
+function extractCurrentIframe(html) {
+    const match = html.match(
+        /<script\s+type=["']application\/json["']>\s*({[\s\S]*?})\s*<\/script>/i
+    );
+
+    if (!match) return null;
+
+    try {
+        const json = JSON.parse(match[1]);
+        return json.currentIframe || null;
+    } catch (err) {
+        console.log("JSON parse failed");
+        return null;
+    }
 }
 
 function loadLastDomain() {
@@ -174,22 +216,18 @@ async function findWorkingDomain() {
     return null;
 }
 
-async function extractBaseUrlFromPage(domain) {
-    const targetUrl = domain + CONFIG_PAGE_PATH;
+async function resolveIframeUrl(domain) {
+    const proxiedAmp = WORKER_PROXY + encodeURIComponent(domain);
 
-    const fullUrl = WORKER_PROXY + encodeURIComponent(targetUrl);
+    console.log("Visiting AMP page:", proxiedAmp);
 
-    console.log("Visiting config page:", fullUrl);
-
-    const html = await fetchWithTimeout(fullUrl);
+    const html = await fetchWithTimeout(proxiedAmp);
     if (!html) return null;
 
-    const baseUrls = extractBaseUrls(html);
-    if (baseUrls.length === 0) return null;
+    const iframeUrl = extractCurrentIframe(html);
+    console.log("Iframe URL found:", iframeUrl);
 
-    const working = await pickWorkingBaseUrl(baseUrls);
-
-    return working;
+    return iframeUrl;
 }
 
 function extractBaseUrls(html) {
@@ -206,7 +244,6 @@ function extractBaseUrls(html) {
 }
 
 async function pickWorkingBaseUrl(baseUrls) {
-
     for (const url of baseUrls) {
 
         // Try lightweight test
@@ -294,9 +331,17 @@ ${streamUrl}
 }
 
 (async () => {
-    const baseUrl = await extractBaseUrlFromPage(REDIRECT_URL);
-    if (!baseUrl) throw new Error("Could not extract baseUrl");
+    const ampDomain = await resolveAmpDomain();
+    if (!ampDomain) throw new Error("Could not resolve AMP domain");
 
+    const iframeUrl = await resolveIframeUrl(ampDomain);
+    if (!iframeUrl) throw new Error("Iframe URL not found");
+
+    const proxiedIframe = WORKER_PROXY + encodeURIComponent(iframeUrl);
+    const iframeHtml = await fetchWithTimeout(proxiedIframe);
+
+    const baseUrls = extractBaseUrls(iframeHtml);
+    const baseUrl = await pickWorkingBaseUrl(baseUrls);
     console.log("Extracted baseUrl:", baseUrl);
 
     const count = await generateStreams(baseUrl);
