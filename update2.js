@@ -332,7 +332,7 @@ ${streamUrl}
         const count = await generateStreams(baseUrl);
         if (count === 0) throw new Error("No valid streams generated");
 
-        saveLastDomain(domain);
+        //saveLastDomain(domain);
 
         healthReport.success = healthReport.streams.some(s => s.valid);
 
