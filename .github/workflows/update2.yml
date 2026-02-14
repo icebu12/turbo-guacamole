@@ -25,6 +25,6 @@ jobs:
         run: |
           git config --global user.name "stream-bot"
           git config --global user.email "bot@users.noreply.github.com"
-          git add streams2/*.m3u8 health2.json
+          git add streams2/*.m3u8
           git commit -m "Auto update streams" || echo "No changes"
           git push
