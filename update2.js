@@ -8,6 +8,7 @@ const REFERER = `${REDIRECT_URL}/`
 const OUTPUT_DIR = "streams2";
 
 const STREAM_SUFFIXES = [
+    { name: "androstreamlivebiraz1", path: `androstreamlivebiraz1.m3u8` },
     { name: "androstreamlivebs1", path: `androstreamlivebs1.m3u8` },
     { name: "androstreamlivebs2", path: `androstreamlivebs2.m3u8` },
     { name: "androstreamlivebs3", path: `androstreamlivebs3.m3u8` },
@@ -104,7 +105,6 @@ async function resolveAmpDomain() {
     console.log("Visiting main site:", proxiedUrl);
 
     const html = await fetchWithTimeout(proxiedUrl);
-
     if (!html) return null;
 
     const ampUrl = extractAmpUrl(html);
@@ -128,19 +128,6 @@ function extractCurrentIframe(html) {
         console.log("JSON parse failed");
         return null;
     }
-}
-
-function loadLastDomain() {
-    if (!fs.existsSync("domains2.json")) return null;
-    const data = JSON.parse(fs.readFileSync("domains2.json"));
-    return data.lastWorking || null;
-}
-
-function saveLastDomain(domain) {
-    fs.writeFileSync(
-        "domains2.json",
-        JSON.stringify({ lastWorking: domain }, null, 2)
-    );
 }
 
 async function resolveRedirectChain(startUrl, maxDepth = 5) {
