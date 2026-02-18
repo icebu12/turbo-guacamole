@@ -1,7 +1,7 @@
 {
-  "timestamp": 1771444883093,
+  "timestamp": 1771451880082,
   "success": true,
-  "workingDomain": "https://trgoals1536.xyz",
+  "workingDomain": "https://trgoals1537.xyz",
   "baseUrl": "https://no6.d72577a9dd0ec27.sbs/",
   "streams": [
     {
@@ -199,14 +199,14 @@
     {
       "name": "ex6",
       "url": "https://no6.d72577a9dd0ec27.sbs/ex6/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "ex7",
       "url": "https://no6.d72577a9dd0ec27.sbs/ex7/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "ex8",
