@@ -1,5 +1,5 @@
 {
-  "timestamp": 1771372985745,
+  "timestamp": 1771393226962,
   "success": true,
   "workingDomain": "https://trgoals1535.xyz",
   "baseUrl": "https://no6.d72577a9dd0ec27.sbs/",
@@ -217,14 +217,14 @@
     {
       "name": "eu1",
       "url": "https://no6.d72577a9dd0ec27.sbs/eu1/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "eu2",
       "url": "https://no6.d72577a9dd0ec27.sbs/eu2/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     }
   ],
   "error": null
