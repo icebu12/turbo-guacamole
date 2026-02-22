@@ -23,7 +23,6 @@ jobs:
 
       - name: Commit changes
         run: |
-        run: |
           git config --global user.name "stream-bot"
           git config --global user.email "bot@users.noreply.github.com"
           
