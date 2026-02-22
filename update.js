@@ -283,7 +283,7 @@ ${streamUrl}
 
         saveLastDomain(domain);
 
-        healthReport.success = healthReport.streams.some(s => s.valid);
+    //    healthReport.success = healthReport.streams.some(s => s.valid);
 
         fs.writeFileSync(
             "health.json",
