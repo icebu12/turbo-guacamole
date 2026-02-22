@@ -1,7 +1,7 @@
 import fs from "fs";
 
 const REDIRECT_URL = "https://t.co/6vPuUxO91F";
-const BASE_PATTERN = "https://trgoals1532.xyz";
+const BASE_PATTERN = "https://trgoals1542.xyz";
 const CONFIG_PAGE_PATH = "/channel.html?id=trgoals";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
@@ -225,7 +225,6 @@ async function generateStreams(baseUrl) {
     }
 
     for (const stream of STREAM_SUFFIXES) {
-
         const streamUrl = baseUrl + stream.path;
 
         const streamStatus = {
@@ -235,15 +234,14 @@ async function generateStreams(baseUrl) {
             error: null
         };
 
-        console.log("Validating stream:", streamUrl);
+    //    console.log("Validating stream:", streamUrl);
 
         try {
 
-            const valid = await validateStream(streamUrl);
+        //    const valid = await validateStream(streamUrl);
 
-            if (valid) {
-
-                streamStatus.valid = true;
+        //    if (valid) {
+            //    streamStatus.valid = true;
                 success++;
 
                 const filename = `${OUTPUT_DIR}/stream_${stream.name}.m3u8`;
@@ -254,9 +252,9 @@ ${streamUrl}
 
                 fs.writeFileSync(filename, content);
 
-            } else {
+        /*    } else {
                 streamStatus.error = "Validation failed";
-            }
+            }*/
 
         } catch (err) {
             streamStatus.error = err.message;
