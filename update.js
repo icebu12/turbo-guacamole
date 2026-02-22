@@ -234,14 +234,13 @@ async function generateStreams(baseUrl) {
             error: null
         };
 
-    //    console.log("Validating stream:", streamUrl);
+        console.log("Validating stream:", streamUrl);
 
         try {
+            const valid = await validateStream(streamUrl);
 
-        //    const valid = await validateStream(streamUrl);
-
-        //    if (valid) {
-            //    streamStatus.valid = true;
+            if (valid) {
+                streamStatus.valid = true;
                 success++;
 
                 const filename = `${OUTPUT_DIR}/stream_${stream.name}.m3u8`;
@@ -252,9 +251,9 @@ ${streamUrl}
 
                 fs.writeFileSync(filename, content);
 
-        /*    } else {
+            } else {
                 streamStatus.error = "Validation failed";
-            }*/
+            }
 
         } catch (err) {
             streamStatus.error = err.message;
@@ -283,7 +282,7 @@ ${streamUrl}
 
         saveLastDomain(domain);
 
-    //    healthReport.success = healthReport.streams.some(s => s.valid);
+        healthReport.success = healthReport.streams.some(s => s.valid);
 
         fs.writeFileSync(
             "health.json",
