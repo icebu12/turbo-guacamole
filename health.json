@@ -1,5 +1,5 @@
 {
-  "timestamp": 1771783137373,
+  "timestamp": 1771787654718,
   "success": true,
   "workingDomain": "https://trgoals1542.xyz",
   "baseUrl": "https://dje.d72577a9dd0ec29.sbs/",
@@ -205,8 +205,8 @@
     {
       "name": "ex7",
       "url": "https://dje.d72577a9dd0ec29.sbs/ex7/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex8",
