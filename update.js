@@ -1,11 +1,11 @@
 import fs from "fs";
 
-const REDIRECT_URL = "https://t.co/6vPuUxO91F";
-const BASE_PATTERN = "https://trgoals1542.xyz";
+const REDIRECT_URL = "https://t.co/eh8vwMTI0J";
+const BASE_PATTERN = "https://taraftarium1001.xyz/";
 const CONFIG_PAGE_PATH = "/channel.html?id=trgoals";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
-const REFERER = "https://trgoals.xyz"
+const REFERER = "https://taraftarium.xyz/"
 const OUTPUT_DIR = "streams";
 const SUFFIX = "mono.m3u8"
 
@@ -19,7 +19,7 @@ const healthReport = {
 };
 
 const STREAM_SUFFIXES = [
-    { name: "trgoals", path: `trgoals/${SUFFIX}` },
+    { name: "taraftarium", path: `taraftarium/${SUFFIX}` },
     { name: "zirve", path: `zirve/${SUFFIX}` },
     { name: "yayin1", path: `yayin1/${SUFFIX}` },
     { name: "inat", path: `inat/${SUFFIX}` },
