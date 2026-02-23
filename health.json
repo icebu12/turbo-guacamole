@@ -1,230 +1,230 @@
 {
-  "timestamp": 1771796891772,
-  "success": false,
-  "workingDomain": "https://taraftarium1001.xyz",
-  "baseUrl": "https://dje.d72577a9dd0ec29.sbs/",
+  "timestamp": 1771870499543,
+  "success": true,
+  "workingDomain": "https://taraftarium1002.xyz",
+  "baseUrl": "https://8pi.d72577a9dd0ec30.sbs/",
   "streams": [
     {
-      "name": "trgoals",
-      "url": "https://dje.d72577a9dd0ec29.sbs/trgoals/mono.m3u8",
-      "valid": false,
+      "name": "taraftarium",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/taraftarium/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "zirve",
-      "url": "https://dje.d72577a9dd0ec29.sbs/zirve/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/zirve/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "yayin1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/yayin1/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/yayin1/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "inat",
-      "url": "https://dje.d72577a9dd0ec29.sbs/inat/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/inat/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "b2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/b2/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/b2/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "b3",
-      "url": "https://dje.d72577a9dd0ec29.sbs/b3/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/b3/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "b4",
-      "url": "https://dje.d72577a9dd0ec29.sbs/b4/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/b4/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "b5",
-      "url": "https://dje.d72577a9dd0ec29.sbs/b5/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/b5/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "bm1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/bm1/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/bm1/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "bm2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/bm2/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/bm2/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "ss",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ss/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ss/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "ss2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ss2/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ss2/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "t1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/t1/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/t1/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "t2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/t2/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/t2/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "t3",
-      "url": "https://dje.d72577a9dd0ec29.sbs/t3/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/t3/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "t4",
-      "url": "https://dje.d72577a9dd0ec29.sbs/t4/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/t4/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "smarts",
-      "url": "https://dje.d72577a9dd0ec29.sbs/smarts/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/smarts/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "sms2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/sms2/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/sms2/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "trtspor",
-      "url": "https://dje.d72577a9dd0ec29.sbs/trtspor/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/trtspor/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "trtspor2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/trtspor2/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/trtspor2/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "trt1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/trt1/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/trt1/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "as",
-      "url": "https://dje.d72577a9dd0ec29.sbs/as/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/as/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "atv",
-      "url": "https://dje.d72577a9dd0ec29.sbs/atv/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/atv/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "tv8",
-      "url": "https://dje.d72577a9dd0ec29.sbs/tv8/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/tv8/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "tv85",
-      "url": "https://dje.d72577a9dd0ec29.sbs/tv85/mono.m3u8",
-      "valid": false,
+      "url": "https://8pi.d72577a9dd0ec30.sbs/tv85/mono.m3u8",
+      "valid": true,
       "error": null
     },
     {
       "name": "f1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/f1/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/f1/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "nbatv",
-      "url": "https://dje.d72577a9dd0ec29.sbs/nbatv/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/nbatv/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex1/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex1/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex2/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex2/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex3",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex3/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex3/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex4",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex4/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex4/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex5",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex5/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex5/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex6",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex6/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex6/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex7",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex7/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex7/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "ex8",
-      "url": "https://dje.d72577a9dd0ec29.sbs/ex8/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/ex8/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "eu1",
-      "url": "https://dje.d72577a9dd0ec29.sbs/eu1/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/eu1/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     },
     {
       "name": "eu2",
-      "url": "https://dje.d72577a9dd0ec29.sbs/eu2/mono.m3u8",
+      "url": "https://8pi.d72577a9dd0ec30.sbs/eu2/mono.m3u8",
       "valid": false,
-      "error": null
+      "error": "Validation failed"
     }
   ],
   "error": null
