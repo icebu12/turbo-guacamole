@@ -1,7 +1,7 @@
 import fs from "fs";
 
-const REDIRECT_URL = "https://t.co/eh8vwMTI0J";
-const BASE_PATTERN = "https://taraftarium1001.xyz/";
+const REDIRECT_URL = "https://t.co/E3sufVe1Ev";
+const BASE_PATTERN = "https://taraftarium1004.xyz/";
 const CONFIG_PAGE_PATH = "/channel.html?id=trgoals";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
