@@ -1,7 +1,7 @@
 {
-  "timestamp": 1772300637687,
+  "timestamp": 1772305199939,
   "success": true,
-  "workingDomain": "https://taraftarium1008.xyz",
+  "workingDomain": "https://taraftarium1009.xyz",
   "baseUrl": "https://8pi.d72577a9dd0ec30.sbs/",
   "streams": [
     {
@@ -169,8 +169,8 @@
     {
       "name": "ex1",
       "url": "https://8pi.d72577a9dd0ec30.sbs/ex1/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex2",
@@ -205,8 +205,8 @@
     {
       "name": "ex7",
       "url": "https://8pi.d72577a9dd0ec30.sbs/ex7/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "ex8",
