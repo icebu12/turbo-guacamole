@@ -1,5 +1,5 @@
 {
-  "timestamp": 1773500408479,
+  "timestamp": 1773504054192,
   "success": true,
   "workingDomain": "https://taraftarium1025.xyz",
   "baseUrl": "https://bg5.d72577a9dd0ec36.sbs/",
@@ -217,14 +217,14 @@
     {
       "name": "eu1",
       "url": "https://bg5.d72577a9dd0ec36.sbs/eu1/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "eu2",
       "url": "https://bg5.d72577a9dd0ec36.sbs/eu2/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     }
   ],
   "error": null
