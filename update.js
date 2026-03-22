@@ -1,7 +1,7 @@
 import fs from "fs";
 
-const REDIRECT_URL = "https://taraftarium1025.xyz";
-const BASE_PATTERN = "https://taraftarium1025.xyz/";
+const REDIRECT_URL = "https://trgoalsgiris.xyz";
+const BASE_PATTERN = "https://taraftarium1030.xyz/";
 const CONFIG_PAGE_PATH = "/channel.html?id=trgoals";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
@@ -64,7 +64,7 @@ const M3U8_HEADER = `#EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:BANDWIDTH=5500000,RESOLUTION=1920x1080,FRAME-RATE=25`;
 
-function fetchWithTimeout(url, timeout = 8000) {
+async function fetchWithTimeout(url, timeout = 8000) {
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), timeout);
 
@@ -96,8 +96,47 @@ function saveLastDomain(domain) {
     );
 }
 
+async function extractButtonUrl(url) {
+    try {
+        const res = await fetch(url, {
+            headers: {
+                "User-Agent": USER_AGENT
+            }
+        });
+
+        if (!res || !res.ok) return null;
+
+        const html = await res.text();
+
+        const containerMatch = html.match(
+            /<div[^>]*class=["'][^"']*buttons[^"']*["'][^>]*>([\s\S]*?)<\/div>/i
+        );
+
+        if (!containerMatch) return null;
+
+        const linkMatch = [...containerMatch[1].matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>(.*?)<\/a>/gi)]
+            .find(m => m[2].toLowerCase().includes("canlı"));
+
+        if (!linkMatch) return null;
+
+        const extracted = new URL(linkMatch[1], url).href;
+
+        console.log("Extracted button URL:", extracted);
+
+        return extracted;
+
+    } catch {
+        return null;
+    }
+}
+
 async function resolveRedirectChain(startUrl, maxDepth = 5) {
-    let currentUrl = startUrl;
+    const extracted = await extractButtonUrl(startUrl);
+    let currentUrl = extracted || startUrl;
+
+    if (extracted) {
+        console.log("Using extracted URL instead of startUrl");
+    }
 
     for (let i = 0; i < maxDepth; i++) {
         console.log("Resolving:", currentUrl);
@@ -109,31 +148,28 @@ async function resolveRedirectChain(startUrl, maxDepth = 5) {
 
         if (!res || !res.ok) return null;
 
-        // If HTTP redirect happened, fetch already followed it
         let finalUrl = res.url;
-
         const text = await res.text();
 
-        // 1️⃣ JS redirect (location.replace or window.location)
+        // 1 JS redirect
         const jsMatch = text.match(/location\.replace\(["']([^"']+)["']\)/i)
             || text.match(/window\.location\s*=\s*["']([^"']+)["']/i);
 
         if (jsMatch) {
-            currentUrl = jsMatch[1];
+            currentUrl = new URL(jsMatch[1], currentUrl).href;
             continue;
         }
 
-        // 2️⃣ Meta refresh redirect
+        // 2 Meta refresh
         const metaMatch = text.match(
             /<meta[^>]+http-equiv=["']?refresh["']?[^>]+content=["'][^"']*url=([^"']+)["']/i
         );
 
         if (metaMatch) {
-            currentUrl = metaMatch[1];
+            currentUrl = new URL(metaMatch[1], currentUrl).href;
             continue;
         }
 
-        // No more JS/meta redirect → return final origin
         return new URL(finalUrl).origin;
     }
 
@@ -158,7 +194,7 @@ async function findWorkingDomain() {
 
     for (const domain of candidates) {
         console.log("Testing domain:", domain);
-        const resolved = await resolveRedirectChain(REDIRECT_URL);
+        const resolved = await resolveRedirectChain(domain);
         if (resolved) {
             console.log("Resolved final domain:", resolved);
             return resolved;
