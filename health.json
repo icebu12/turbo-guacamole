@@ -1,5 +1,5 @@
 {
-  "timestamp": 1774434450624,
+  "timestamp": 1774437893944,
   "success": true,
   "workingDomain": "https://taraftarium1030.xyz",
   "baseUrl": "https://0ch.d72577a9dd0ec41.sbs/",
@@ -7,8 +7,8 @@
     {
       "name": "taraftarium",
       "url": "https://0ch.d72577a9dd0ec41.sbs/taraftarium/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "zirve",
