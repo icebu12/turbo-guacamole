@@ -1,5 +1,5 @@
 {
-  "timestamp": 1774841452652,
+  "timestamp": 1774850627958,
   "success": true,
   "workingDomain": "https://taraftarium1030.xyz",
   "baseUrl": "https://0ch.d72577a9dd0ec41.sbs/",
@@ -13,8 +13,8 @@
     {
       "name": "zirve",
       "url": "https://0ch.d72577a9dd0ec41.sbs/zirve/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "yayin1",
@@ -217,14 +217,14 @@
     {
       "name": "eu1",
       "url": "https://0ch.d72577a9dd0ec41.sbs/eu1/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "eu2",
       "url": "https://0ch.d72577a9dd0ec41.sbs/eu2/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     }
   ],
   "error": null
