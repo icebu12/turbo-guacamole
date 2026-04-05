@@ -1,5 +1,5 @@
 {
-  "timestamp": 1775404190630,
+  "timestamp": 1775404668846,
   "success": true,
   "workingDomain": "https://taraftarium1032.xyz",
   "baseUrl": "https://ycl.d72577a9dd0ec44.sbs/",
@@ -115,8 +115,8 @@
     {
       "name": "trtspor",
       "url": "https://ycl.d72577a9dd0ec44.sbs/trtspor/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "trtspor2",
@@ -127,8 +127,8 @@
     {
       "name": "trt1",
       "url": "https://ycl.d72577a9dd0ec44.sbs/trt1/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "as",
