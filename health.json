@@ -1,5 +1,5 @@
 {
-  "timestamp": 1776636107793,
+  "timestamp": 1776639988868,
   "success": true,
   "workingDomain": "https://taraftarium1048.xyz",
   "baseUrl": "https://00x.d72577a9dd0ec58.cfd/",
@@ -205,8 +205,8 @@
     {
       "name": "ex7",
       "url": "https://00x.d72577a9dd0ec58.cfd/ex7/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "ex8",
