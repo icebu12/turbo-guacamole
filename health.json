@@ -1,228 +1,228 @@
 {
-  "timestamp": 1777123390940,
+  "timestamp": 1777127056553,
   "success": true,
-  "workingDomain": "https://taraftarium1049.xyz",
-  "baseUrl": "https://46d.d72577a9dd0ec60.cfd/",
+  "workingDomain": "https://taraftarium1050.xyz",
+  "baseUrl": "https://0nl.d72577a9dd0ec61.cfd/",
   "streams": [
     {
       "name": "taraftarium",
-      "url": "https://46d.d72577a9dd0ec60.cfd/taraftarium/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/taraftarium/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "zirve",
-      "url": "https://46d.d72577a9dd0ec60.cfd/zirve/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/zirve/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "yayin1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/yayin1/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/yayin1/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "inat",
-      "url": "https://46d.d72577a9dd0ec60.cfd/inat/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/inat/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "b2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/b2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/b2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "b3",
-      "url": "https://46d.d72577a9dd0ec60.cfd/b3/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/b3/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "b4",
-      "url": "https://46d.d72577a9dd0ec60.cfd/b4/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/b4/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "b5",
-      "url": "https://46d.d72577a9dd0ec60.cfd/b5/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/b5/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "bm1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/bm1/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/bm1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "bm2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/bm2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/bm2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ss",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ss/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ss/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ss2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ss2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ss2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/t1/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/t1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/t2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/t2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t3",
-      "url": "https://46d.d72577a9dd0ec60.cfd/t3/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/t3/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "t4",
-      "url": "https://46d.d72577a9dd0ec60.cfd/t4/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/t4/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "smarts",
-      "url": "https://46d.d72577a9dd0ec60.cfd/smarts/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/smarts/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "sms2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/sms2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/sms2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "trtspor",
-      "url": "https://46d.d72577a9dd0ec60.cfd/trtspor/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/trtspor/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "trtspor2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/trtspor2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/trtspor2/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "trt1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/trt1/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/trt1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "as",
-      "url": "https://46d.d72577a9dd0ec60.cfd/as/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/as/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "atv",
-      "url": "https://46d.d72577a9dd0ec60.cfd/atv/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/atv/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "tv8",
-      "url": "https://46d.d72577a9dd0ec60.cfd/tv8/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/tv8/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "tv85",
-      "url": "https://46d.d72577a9dd0ec60.cfd/tv85/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/tv85/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "f1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/f1/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/f1/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "nbatv",
-      "url": "https://46d.d72577a9dd0ec60.cfd/nbatv/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/nbatv/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex1/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex1/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ex2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex2/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex3",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex3/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex3/mono.m3u8",
       "valid": true,
       "error": null
     },
     {
       "name": "ex4",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex4/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex4/mono.m3u8",
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex5",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex5/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex5/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "ex6",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex6/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex6/mono.m3u8",
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex7",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex7/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex7/mono.m3u8",
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex8",
-      "url": "https://46d.d72577a9dd0ec60.cfd/ex8/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/ex8/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     },
     {
       "name": "eu1",
-      "url": "https://46d.d72577a9dd0ec60.cfd/eu1/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "url": "https://0nl.d72577a9dd0ec61.cfd/eu1/mono.m3u8",
+      "valid": true,
+      "error": null
     },
     {
       "name": "eu2",
-      "url": "https://46d.d72577a9dd0ec60.cfd/eu2/mono.m3u8",
+      "url": "https://0nl.d72577a9dd0ec61.cfd/eu2/mono.m3u8",
       "valid": false,
       "error": "Validation failed"
     }
