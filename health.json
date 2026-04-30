@@ -1,5 +1,5 @@
 {
-  "timestamp": 1777571513136,
+  "timestamp": 1777578265931,
   "success": true,
   "workingDomain": "https://taraftarium1057.xyz",
   "baseUrl": "https://y8t.d72577a9dd0ec65.cfd/",
@@ -121,8 +121,8 @@
     {
       "name": "trtspor2",
       "url": "https://y8t.d72577a9dd0ec65.cfd/trtspor2/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "trt1",
@@ -175,8 +175,8 @@
     {
       "name": "ex2",
       "url": "https://y8t.d72577a9dd0ec65.cfd/ex2/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex3",
@@ -205,8 +205,8 @@
     {
       "name": "ex7",
       "url": "https://y8t.d72577a9dd0ec65.cfd/ex7/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex8",
@@ -217,14 +217,14 @@
     {
       "name": "eu1",
       "url": "https://y8t.d72577a9dd0ec65.cfd/eu1/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "eu2",
       "url": "https://y8t.d72577a9dd0ec65.cfd/eu2/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     }
   ],
   "error": null
