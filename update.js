@@ -108,24 +108,39 @@ async function extractButtonUrl(url) {
 
         const html = await res.text();
 
-        const containerMatch = html.match(
-            /<div[^>]*class=["'][^"']*buttons[^"']*["'][^>]*>([\s\S]*?)<\/div>/i
-        );
+        // Find all anchors
+        const matches = [
+            ...html.matchAll(
+                /<a[^>]+href=["']([^"']+)["'][^>]*>(.*?)<\/a>/gis
+            )
+        ];
 
-        if (!containerMatch) return null;
+        // Look for "canlı maç giriş" style text
+        const target = matches.find(m => {
+            const text = m[2]
+                .replace(/<[^>]+>/g, "")
+                .trim()
+                .toLowerCase();
 
-        const linkMatch = [...containerMatch[1].matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>(.*?)<\/a>/gi)]
-            .find(m => m[2].toLowerCase().includes("canlı"));
+            return (
+                text.includes("canlı") &&
+                (
+                    text.includes("giriş") ||
+                    text.includes("girişi")
+                )
+            );
+        });
 
-        if (!linkMatch) return null;
+        if (!target) return null;
 
-        const extracted = new URL(linkMatch[1], url).href;
+        const extracted = new URL(target[1], url).href;
 
         console.log("Extracted button URL:", extracted);
 
         return extracted;
 
-    } catch {
+    } catch (err) {
+        console.log("extractButtonUrl error:", err.message);
         return null;
     }
 }
