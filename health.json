@@ -1,5 +1,5 @@
 {
-  "timestamp": 1781653270005,
+  "timestamp": 1781672554109,
   "success": true,
   "workingDomain": "https://taraftarium1075.xyz",
   "baseUrl": "https://2i4.d72577a9dd0ec71.cfd/",
@@ -31,14 +31,14 @@
     {
       "name": "b2",
       "url": "https://2i4.d72577a9dd0ec71.cfd/b2/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "b3",
       "url": "https://2i4.d72577a9dd0ec71.cfd/b3/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "b4",
@@ -55,14 +55,14 @@
     {
       "name": "bm1",
       "url": "https://2i4.d72577a9dd0ec71.cfd/bm1/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "bm2",
       "url": "https://2i4.d72577a9dd0ec71.cfd/bm2/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "ss",
