@@ -1,5 +1,5 @@
 {
-  "timestamp": 1782259452073,
+  "timestamp": 1782276475709,
   "success": true,
   "workingDomain": "https://taraftarium1076.xyz",
   "baseUrl": "https://2i4.d72577a9dd0ec71.cfd/",
@@ -133,8 +133,8 @@
     {
       "name": "as",
       "url": "https://2i4.d72577a9dd0ec71.cfd/as/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "atv",
@@ -205,8 +205,8 @@
     {
       "name": "ex7",
       "url": "https://2i4.d72577a9dd0ec71.cfd/ex7/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "ex8",
