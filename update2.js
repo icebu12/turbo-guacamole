@@ -1,7 +1,6 @@
 import fs from "fs";
 
 const REDIRECT_URL = "https://taraftariumizle.org";
-const WORKER_PROXY = "https://proxy.freecdn.workers.dev/?url=";
 const MAX_ATTEMPTS = 15;
 const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"
 const REFERER = `${REDIRECT_URL}/`
@@ -100,11 +99,9 @@ function extractAmpUrl(html) {
 }
 
 async function resolveAmpDomain() {
-    const proxiedUrl = WORKER_PROXY + encodeURIComponent(REDIRECT_URL);
+    console.log("Visiting main site:", REDIRECT_URL);
 
-    console.log("Visiting main site:", proxiedUrl);
-
-    const html = await fetchWithTimeout(proxiedUrl);
+    const html = await fetchWithTimeout(REDIRECT_URL);
     if (!html) return null;
 
     const ampUrl = extractAmpUrl(html);
@@ -203,11 +200,9 @@ async function findWorkingDomain() {
 }
 
 async function resolveIframeUrl(domain) {
-    const proxiedAmp = WORKER_PROXY + encodeURIComponent(domain);
+    console.log("Visiting AMP page:", domain);
 
-    console.log("Visiting AMP page:", proxiedAmp);
-
-    const html = await fetchWithTimeout(proxiedAmp);
+    const html = await fetchWithTimeout(domain);
     if (!html) return null;
 
     const iframeUrl = extractCurrentIframe(html);
@@ -233,7 +228,7 @@ async function pickWorkingBaseUrl(baseUrls) {
     for (const url of baseUrls) {
 
         // Try lightweight test
-        const testUrl = WORKER_PROXY + url + "receptestt.m3u8";
+        const testUrl = url + "batutest.m3u8";
 
         const valid = await validateStream(testUrl);
 
@@ -323,8 +318,7 @@ ${streamUrl}
     const iframeUrl = await resolveIframeUrl(ampDomain);
     if (!iframeUrl) throw new Error("Iframe URL not found");
 
-    const proxiedIframe = WORKER_PROXY + encodeURIComponent(iframeUrl);
-    const iframeHtml = await fetchWithTimeout(proxiedIframe);
+    const iframeHtml = await fetchWithTimeout(iframeUrl);
 
     const baseUrls = extractBaseUrls(iframeHtml);
     const baseUrl = await pickWorkingBaseUrl(baseUrls);
