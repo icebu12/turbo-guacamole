@@ -1,5 +1,5 @@
 {
-  "timestamp": 1787536162347,
+  "timestamp": 1787541052545,
   "success": true,
   "workingDomain": "https://taraftarium1080.xyz",
   "baseUrl": "https://2i4.d72577a9dd0ec71.cfd/",
@@ -121,8 +121,8 @@
     {
       "name": "trtspor2",
       "url": "https://2i4.d72577a9dd0ec71.cfd/trtspor2/mono.m3u8",
-      "valid": true,
-      "error": null
+      "valid": false,
+      "error": "Validation failed"
     },
     {
       "name": "trt1",
