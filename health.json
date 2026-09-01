@@ -1,7 +1,7 @@
 {
-  "timestamp": 1788256500364,
+  "timestamp": 1788273782644,
   "success": true,
-  "workingDomain": "https://taraftarium1081.xyz",
+  "workingDomain": "https://taraftarium1082.xyz",
   "baseUrl": "https://2i4.d72577a9dd0ec71.cfd/",
   "streams": [
     {
@@ -103,8 +103,8 @@
     {
       "name": "smarts",
       "url": "https://2i4.d72577a9dd0ec71.cfd/smarts/mono.m3u8",
-      "valid": false,
-      "error": "Validation failed"
+      "valid": true,
+      "error": null
     },
     {
       "name": "sms2",
