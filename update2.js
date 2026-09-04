@@ -88,9 +88,9 @@ function fetchWithTimeout(url, timeout = 8000) {
         .catch(() => null);
 }
 
-function extractAmpUrl(html) {
+function extractBaseUrl(html) {
     const match = html.match(
-        /<link\s+rel=["']amphtml["']\s+href=["']([^"']+)["']/i
+        /<link[^>]*hreflang=["']tr["'][^>]*href=["'](https?:\/\/[^"']+)["']/
     );
 
     if (!match) return null;
@@ -98,10 +98,33 @@ function extractAmpUrl(html) {
     return match[1];
 }
 
-async function resolveAmpDomain() {
+function extractAmpUrl(html) {
+    const match = html.match(
+        /src=["'](https?:\/\/[^"']*?)taraftariumizleorg\.js["']/
+    );
+
+    if (!match) return null;
+
+    return match[1];
+}
+
+async function resolveBaseDomain() {
     console.log("Visiting main site:", REDIRECT_URL);
 
     const html = await fetchWithTimeout(REDIRECT_URL);
+    if (!html) return null;
+
+    const baseUrl = extractBaseUrl(html);
+
+    console.log("Base URL found:", baseUrl);
+
+    return baseUrl;
+}
+
+async function resolveAmpDomain(url) {
+    console.log("Visiting amp site:", url);
+
+    const html = await fetchWithTimeout(url);
     if (!html) return null;
 
     const ampUrl = extractAmpUrl(html);
@@ -312,7 +335,10 @@ ${streamUrl}
 }
 
 (async () => {
-    const ampDomain = await resolveAmpDomain();
+    const baseDomain = await resolveBaseDomain();
+    if (!baseDomain) throw new Error("Could not resolve base domain");
+    
+    const ampDomain = await resolveAmpDomain(baseDomain);
     if (!ampDomain) throw new Error("Could not resolve AMP domain");
 
     const iframeUrl = await resolveIframeUrl(ampDomain);
